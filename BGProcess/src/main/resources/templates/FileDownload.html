@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Processed Image</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.image-container {
+			display: flex;
+			justify-content: space-between;
+			margin: 20px 0;
+		}
+
+		.image-box {
+			text-align: center;
+			margin: 0 10px;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border: 1px solid #ddd;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Processed Image</h1>
+
+	<div class="image-container">
+		<div class="image-box">
+			<h3>Original Image</h3>
+			<img th:src="${originalImage}" alt="Original Image">
+		</div>
+		<div class="image-box">
+			<h3>Processed Image</h3>
+			<img th:src="${processedImage}" alt="Processed Image">
+		</div>
+	</div>
+
+	<a href="/">Process Another Image</a>
+</body>
+
+</html>
